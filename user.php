@@ -48,6 +48,7 @@ class User
 
 class Login extends User
 {
+    protected $login = true;
     protected $username;
     protected $email;
     protected $password;
@@ -56,6 +57,14 @@ class Login extends User
         $this->username = $username;
         $this->email = $email;
         $this->password = $password;
+    }
+
+    public function login() {
+        $this->login = false;
+    }
+
+    public function getLogin() {
+        return $this->login;
     }
 
     public function getUsername() {

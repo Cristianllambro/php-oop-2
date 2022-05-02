@@ -1,14 +1,17 @@
 <?php
+include_once __DIR__ . '/user.php';
+
+// NON SONO CAPACE DI FARE LA LOGICA, PURTROPPO MI TOCCA CONSEGNARLO COSI
+
 class Product
 {
     protected string $productName;
-    protected $price;
+    protected float $price;
     protected int $discount = 0;
 
-    public function __construct($productName, $price, $discount) {
+    public function __construct($productName, $price) {
         $this->productName = $productName;
         $this->price = $price;
-        $this->discount = $discount;
     }
 
     public function getProductName() {
@@ -35,10 +38,9 @@ class Product
         $this->discount = $discount;
     }
 
-    // public function getDiscountBed() {
-    //     return $this->$price * (1 - $discount / 100);
-    // }
-
+    public function getDiscountPrice($discountPercente) {
+        return $this->price * (1 - $discountPercente / 100);
+    }
 }
 
 class Bed extends Product 
@@ -67,7 +69,18 @@ class Bed extends Product
     }
 }
 
-$objGeneral = new Product('letto', '14.99', 10);
-$obj = new Bed('Letto');
-var_dump($objGeneral);
-var_dump($obj);
+
+
+
+$objGeneral = new Product('letto', '14.99');
+
+
+$letto = new Bed('Letto');
+
+// $letto = $product->price;
+// if ($user->login) {
+//   $letto = $product->getDiscountPrice(20);
+// }
+
+
+var_dump($letto);
