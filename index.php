@@ -15,17 +15,14 @@ class Product
 
 }
 
-class User extends products
+class User
 {
     private $isLoggedIn = false;
-    private $userName;
+    private $username;
     private $password;
 
-    public function __construct($_userName, $_password){
-        if(!$isLoggedIn){
-            $this->userName = $_userName;
-            $this->password = $_password;
-        }
+    public function getLoginOut(){
+        $this->isLoggedIn = true;
     }
 
     public function getisLoggedIn() {
@@ -33,10 +30,14 @@ class User extends products
     }
 }
 
-// $price = $product->price;
 
-// if ($user->isLoggedIn) {
-//   $price = $product->getDiscountPrice(20);
-// }
 
-  
+$obj = new User();
+$obj->bed = 20;
+
+
+if ($obj->$isLoggedIn) {
+  $price = $bed->getDiscountBed(20);
+}
+
+var_dump($obj);
