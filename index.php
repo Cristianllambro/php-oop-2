@@ -1,12 +1,12 @@
 <?php
 class Product
 {
-    protected string $bed;
+    protected string $productName;
     protected float $price;
     protected int $discount = 0;
 
-    public function getBed() {
-        return $this->bed;
+    public function getProductName() {
+        return $this->productName;
     }
 
     public function getPrice() {
@@ -29,23 +29,14 @@ class User
     private $username;
     private $password;
 
-    public function getLoginOut(){
-        $this->isLoggedIn = true;
-    }
-
-    public function getisLoggedIn() {
-        return $this->isLoggedIn;
-    }
-}
+    
 
 
 
-$obj = new User();
-$obj->bed = 20;
+// $obj = new User();
+// $obj->bed = 20;
 
 
-if ($obj->$isLoggedIn) {
-  $bed = $price->getDiscountBed(20);
-}
-
-var_dump($obj);
+// if ($obj->$isLoggedIn) {
+//   $bed = $price->getDiscountBed(20);
+// }
