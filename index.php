@@ -13,6 +13,10 @@ class Product
         return $this->price;
     }
 
+    public function getDiscount() {
+        return $this->discount;
+    }
+
     public function getDiscountBed() {
         return $this->$price * (1 - $discount / 100);
     }
