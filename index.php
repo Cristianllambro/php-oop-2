@@ -1,16 +1,20 @@
 <?php
 class Product
 {
-    protected $bed;
-    protected $toy;
-    protected $discount;
+    protected string $bed;
+    protected float $price;
+    protected int $discount = 0;
 
-    public function getDiscountBed() {
-        return $this->$bed * (1 - $discount / 100);
+    public function getBed() {
+        return $this->bed;
     }
 
-    public function getDiscountToy() {
-        return $this->$toy * (1 - $discount / 100);
+    public function getPrice() {
+        return $this->price;
+    }
+
+    public function getDiscountBed() {
+        return $this->$price * (1 - $discount / 100);
     }
 
 }
@@ -37,7 +41,7 @@ $obj->bed = 20;
 
 
 if ($obj->$isLoggedIn) {
-  $price = $bed->getDiscountBed(20);
+  $bed = $price->getDiscountBed(20);
 }
 
 var_dump($obj);
