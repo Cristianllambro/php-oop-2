@@ -46,7 +46,17 @@ class CreditCard
     public function setCvc($cvc) {
         $this->cvc = $cvc;
     }
+
+    public function setCheckCard($expiration) {
+        $date = date('Y/m/d');
+        if($date <= $expiration) {
+            $this->$expiration = 'Carta valida';
+        } else {
+            $this->$expiration = 'Carta scaduta';
+        }
+    }
 }
 
-$card = new CreditCard('123456789', 'Unicredit', '05/25', '345');
+$card = new CreditCard('123456789', 'Unicredit', '2020/01/01' ,'345');
+$card->setCheckCard('2020/01/01');
 var_dump($card);
