@@ -6,13 +6,13 @@ class CreditCard
     protected $numberCard;
     protected $bank;
     protected $expiration;
-    protected $cvc;
+    protected $cvv;
 
-    public function __construct($numberCard, $bank, $expiration, $cvc){
+    public function __construct($numberCard, $bank, $expiration, $cvv){
         $this->numberCard = $numberCard;
         $this->bank = $bank;
         $this->expiration = $expiration;
-        $this->cvc = $cvc;
+        $this->cvv = $cvv;
     }
 
     public function getNumberCard() {
@@ -39,12 +39,12 @@ class CreditCard
         $this->expiration = $expiration;
     }
 
-    public function getCvc() {
-        return $this->cvc;
+    public function getCvv() {
+        return $this->cvv;
     }
 
-    public function setCvc($cvc) {
-        $this->cvc = $cvc;
+    public function setCvv($cvv) {
+        $this->cvc = $cvv;
     }
 
     public function setCheckCard($expiration) {
